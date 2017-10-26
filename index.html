@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="clock/clock.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -17,13 +18,6 @@
 <div class="galaxy-s8">
     <div class="bazzel">
         <div class="screen">
-
-            <!--Four more divs:
-                Notification Bar
-                Time widget
-                App icons
-                Navigation interface-->
-
             <div class="notification">
                 <i class="fa fa-wifi" aria-hidden="true" style="color: white"></i>
                 <i class="fa fa-signal" aria-hidden="true" style="color: white"></i>
@@ -33,10 +27,43 @@
             </div>
 
             <div class="widget">
-                <i class="fa fa-signal fa-5x" aria-hidden="true" style="color: white"></i>
+                <!--<i class="fa fa-signal fa-5x" aria-hidden="true" style="color: white"></i>-->
+                <div id="chooser">
+                </div>
+
+                <div class="fill">
+                    <div class="clock
+              hour-style-pill
+              hour-text-style-large
+              hour-display-style-all
+              minute-style-line
+              minute-display-style-fine-2
+              minute-text-style-outside
+              hand-style-hollow
+              " id="utility-clock">
+                        <div class="centre">
+                            <div class="dynamic"></div>
+                            <div class="expand round circle-1"></div>
+                            <div class="anchor hour">
+                                <div class="element thin-hand"></div>
+                                <div class="element fat-hand"></div>
+                            </div>
+                            <div class="anchor minute">
+                                <div class="element thin-hand"></div>
+                                <div class="element fat-hand minute-hand"></div>
+                            </div>
+                            <div class="anchor second">
+                                <div class="element second-hand second-hand-front"></div>
+                                <div class="element second-hand second-hand-back"></div>
+                            </div>
+                            <div class="expand round circle-2"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="apps">
-                <i class="fa fa-signal fa-5x" aria-hidden="true" style="color: white"></i>
+                <!--<i class="fa fa-signal fa-5x" aria-hidden="true" style="color: white"></i>-->
             </div>
             <div class="navigation">
                 <i class="fa fa-arrow-left" aria-hidden="true" style="color: white"></i>
@@ -58,5 +85,7 @@
 </div>
 
 
+<script src="index.js"></script>
+<script src="clock/clock.js"></script>
 </body>
 </html>
