@@ -106,37 +106,40 @@ function autoResize(element, nativeSize) {
     window.addEventListener('resize', update)
 }
 
-function choose(clock, items) {
-    var chooser = document.querySelector('#chooser')
-    items.forEach(function(item) {
-        var name = item[0]
-        var styles = item[1]
-        var element = document.createElement('div')
-        element.addEventListener('click', click, false)
-        update()
-        chooser.appendChild(element)
-        function update() {
-            element.innerHTML = name + '-style-<b>' + getValue() + '</b>'
-        }
-        function klass(c) {
-            return name + '-style-' + c
-        }
-        function getValue() {
-            for (var i = 0; i < styles.length; i ++) {
-                if (clock.classList.contains(klass(styles[i]))) return styles[i]
-            }
-        }
-        function click(e) {
-            for (var i = 0; i < styles.length; i ++) {
-                if (clock.classList.contains(klass(styles[i]))) {
-                    clock.classList.remove(klass(styles[i]))
-                    clock.classList.add(klass(styles[(i + 1) % styles.length]))
-                    break
-                }
-            }
-            update()
-            e.preventDefault()
-        }
-    })
-}
+
+// un comment this function to enable clock customizer
+
+// function choose(clock, items) {
+//     var chooser = document.querySelector('#chooser')
+//     items.forEach(function(item) {
+//         var name = item[0]
+//         var styles = item[1]
+//         var element = document.createElement('div')
+//         element.addEventListener('click', click, false)
+//         update()
+//         chooser.appendChild(element)
+//         function update() {
+//             element.innerHTML = name + '-style-<b>' + getValue() + '</b>'
+//         }
+//         function klass(c) {
+//             return name + '-style-' + c
+//         }
+//         function getValue() {
+//             for (var i = 0; i < styles.length; i ++) {
+//                 if (clock.classList.contains(klass(styles[i]))) return styles[i]
+//             }
+//         }
+//         function click(e) {
+//             for (var i = 0; i < styles.length; i ++) {
+//                 if (clock.classList.contains(klass(styles[i]))) {
+//                     clock.classList.remove(klass(styles[i]))
+//                     clock.classList.add(klass(styles[(i + 1) % styles.length]))
+//                     break
+//                 }
+//             }
+//             update()
+//             e.preventDefault()
+//         }
+//     })
+// }
 
