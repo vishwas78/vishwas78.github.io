@@ -99,6 +99,7 @@ body {
 }
 
 .galaxy-s8 .edge {
+    pointer-events: none;
     height: 674px;
     width: 292px;
     position: relative;
@@ -224,4 +225,9 @@ body {
     content: "";
     display: table;
     clear: both;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }
