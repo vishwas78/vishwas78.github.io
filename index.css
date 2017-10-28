@@ -205,16 +205,18 @@ body {
     background: #5192d4;
 }
 
-.column {
+.row .column {
     display: inline-block;
     float: left;
     width: 25%;
     height: 110px;
     vertical-align: middle;
-    /*align-self: center;*/
+    align-self: center;
     /*border: solid beige 1px;*/
     /*margin: 50% 0 0 0;*/
     padding: 10% 0 0 0;
+    font-size: 2vh;
+    font-family: "Abyssinica SIL";
 }
 
 /* Clear floats after the columns */
@@ -223,5 +225,3 @@ body {
     display: table;
     clear: both;
 }
-
-
